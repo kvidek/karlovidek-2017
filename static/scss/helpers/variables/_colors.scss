@@ -1,0 +1,77 @@
+//Black
+$black-100: 	rgba(0,0,0,1);
+$black-90: 		rgba(0,0,0,0.9);
+$black-80: 		rgba(0,0,0,0.8);
+$black-70: 		rgba(0,0,0,0.7);
+$black-60: 		rgba(0,0,0,0.6);
+$black-50: 		rgba(0,0,0,0.5);
+$black-40: 		rgba(0,0,0,0.4);
+$black-30: 		rgba(0,0,0,0.3);
+$black-20: 		rgba(0,0,0,0.2);
+$black-10: 		rgba(0,0,0,0.1);
+$black-0: 		rgba(0,0,0,0);
+
+//White
+$white-100: 	rgba(255,255,255,1);
+$white-90: 		rgba(255,255,255,0.9);
+$white-80: 		rgba(255,255,255,0.8);
+$white-70: 		rgba(255,255,255,0.7);
+$white-60: 		rgba(255,255,255,0.6);
+$white-50: 		rgba(255,255,255,0.5);
+$white-40: 		rgba(255,255,255,0.4);
+$white-30: 		rgba(255,255,255,0.3);
+$white-20: 		rgba(255,255,255,0.2);
+$white-10: 		rgba(255,255,255,0.1);
+$white-0: 		rgba(255,255,255,0);
+
+$white: #ffffff;
+$black: #000000;
+
+//#######################################
+//## DEFAULT ############################
+//#######################################
+
+$default-body-text-color: $black;
+$default-body-link-color: $black;
+
+$default-selection-text-color: $white;
+$default-selection-bg-color: $black;
+
+//#######################################
+//## BRAND COLORS #######################
+//#######################################
+// Typical Social-brand colors
+$fb-color           :  #3b5998;
+$twitter-color      :  #55acee;
+$gplus-color        :  #dd4b39;
+$linkedin-color     :  #007bb6;
+$instagram-color    :  #517fa4;
+$pinterest-color    :  #cb2027;
+$flickr-1-color     :  #ff0084;
+$flickr-2-color     :  #0063dc;
+$tumblr-color       :  #32506d;
+$dribble-color      :  #ea4c89;
+$behance-color      :  #1769ff;
+$vine-color         :  #00bf8f;
+$spotify-color      :  #2ebd59;
+$tripadvisor-color  :  #589442;
+$yahoo-color        :  #400191;
+$youtube-color      :  #cd201f;
+
+//#######################################
+//## PROJECT COLORS #####################
+//#######################################
+
+$woodsmoke: #171C1D;
+$woodsmoke-A: #24321c;
+$woodsmoke-B: #283032;
+$woodsmoke-C: #111516;
+
+$spring-green: #16F78A;
+
+$green-kelp: #24321c;
+
+$light-grey: #d1d1d5;
+$light-grey-transparent: rgba(209, 209, 213, 0.3);
+$light-grey: #717677;
+$light-grey-transparent-A: rgba(209, 209, 213, 0.4);

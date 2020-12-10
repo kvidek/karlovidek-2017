@@ -1,0 +1,103 @@
+/*------------------------
+	Bounds
+------------------------*/
+
+@function lower-bound($range){
+    @if length($range) <= 0 {
+        @return 0;
+    }
+    @return nth($range,1);
+}
+
+@function upper-bound($range) {
+    @if length($range) < 2 {
+        @return 999999999999;
+    }
+    @return nth($range, 2);
+}
+
+
+/*------------------------
+	Range definitions
+------------------------*/
+
+//Mobile
+$mobile: 		(0, 600px);
+$mobile-S: 		(0, 319px);
+$mobile-M: 		(320px, 479px);
+$mobile-SM: 	(0, 479px);
+$mobile-L: 		(480px, 599px);
+
+//Tablet
+$tablet: 		(600px, 1024px);
+$tablet-S: 		(600px, 767px);
+$tablet-M: 		(768px, 979px);
+$tablet-SM: 	(600px, 979px);
+$tablet-L: 		(980px, 1024px);
+
+//Desktop
+$desktop: 		(1025px);
+$desktop-S: 	(1025px, 1219px);
+$desktop-M: 	(1220px, 1439px);
+$desktop-L: 	(1440px, 1599px);
+$desktop-XL: 	(1600px);
+
+// breakpoints
+
+$S:     320px;
+$M:     768px;
+$L:     1170px;
+
+
+/*--------------------------------
+	Media Query range templates
+---------------------------------*/
+
+@mixin MQ-range-bound($min, $max) {
+
+    @media only screen and (min-width: #{lower-bound($min)}) and (max-width: #{upper-bound($max)}) {@content}
+
+}
+
+@mixin MQ-range-from($min) {
+
+    @media only screen and (min-width: #{lower-bound($min)}) {@content}
+
+}
+
+
+/*------------------------
+	Media Queries
+------------------------*/
+
+@mixin MQ($canvas: custom, $maxmin: max-width, $size: 0) {
+
+    @if $canvas == mobile  		{@include MQ-range-bound 	($mobile, $mobile) 			{@content}}
+    @if $canvas == mobile-S		{@include MQ-range-bound 	($mobile-S, $mobile-S) 		{@content}}
+    @if $canvas == mobile-M		{@include MQ-range-bound 	($mobile-M, $mobile-M) 		{@content}}
+    @if $canvas == mobile-SM		{@include MQ-range-bound 	($mobile-SM, $mobile-SM) 		{@content}}
+    @if $canvas == mobile-L		{@include MQ-range-bound 	($mobile-L, $mobile-L) 		{@content}}
+
+    @if $canvas == mobile- 		{@include MQ-range-from 	($tablet) 					{@content}}
+
+    @if $canvas == tablet		{@include MQ-range-bound 	($tablet, $tablet) 			{@content}}
+    @if $canvas == tablet-S		{@include MQ-range-bound 	($tablet-S, $tablet-S) 		{@content}}
+    @if $canvas == tablet-M		{@include MQ-range-bound 	($tablet-M, $tablet-M) 		{@content}}
+    @if $canvas == tablet-L		{@include MQ-range-bound 	($tablet-L, $tablet-L) 		{@content}}
+    @if $canvas == tablet-SM    {@include MQ-range-bound 	($tablet-SM, $tablet-SM) 	{@content}}
+
+    @if $canvas == desktop- 	{@include MQ-range-bound 	($mobile, $tablet) 			{@content}}
+
+    @if $canvas == desktop		{@include MQ-range-from 	($desktop) 					{@content}}
+    @if $canvas == desktop-S	{@include MQ-range-bound 	($desktop-S, $desktop-S) 	{@content}}
+    @if $canvas == desktop-M	{@include MQ-range-bound 	($desktop-M, $desktop-M) 	{@content}}
+    @if $canvas == desktop-L	{@include MQ-range-bound 	($desktop-L, $desktop-L) 	{@content}}
+    @if $canvas == desktop-XL	{@include MQ-range-from 	($desktop-XL) 				{@content}}
+
+    @if $canvas == custom	{
+        @media ($maxmin: $class) {
+            @content;
+        }
+    }
+
+}

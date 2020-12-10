@@ -1,0 +1,19 @@
+@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
+
+    @if $mq2 == false {
+
+        @media ($maxmin: $mq01) {
+            @content;
+        }
+
+    }
+
+    @else {
+
+        @media (min-width: $mq01) and (max-width: $mq2) {
+            @content;
+        }
+
+    }
+
+}

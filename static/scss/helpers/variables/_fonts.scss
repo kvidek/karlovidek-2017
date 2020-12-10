@@ -1,0 +1,63 @@
+//########################################
+//## FONT IMPORTS ########################
+//########################################
+
+//Suisse regular
+@font-face {
+    font-family: 'SuisseBPIntl-Regular';
+    src: url('../fonts/SuisseBPIntl-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/SuisseBPIntl-Regular.otf')  format('opentype'),
+    url('../fonts/SuisseBPIntl-Regular.woff') format('woff'), url('../fonts/SuisseBPIntl-Regular.ttf')  format('truetype'), url('../fonts/SuisseBPIntl-Regular.svg#SuisseBPIntl-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Suisse antique
+@font-face {
+    font-family: 'SuisseBPIntl-Antique';
+    src: url('../fonts/SuisseBPIntl-Antique.eot?#iefix') format('embedded-opentype'),  url('../fonts/SuisseBPIntl-Antique.otf')  format('opentype'),
+    url('../fonts/SuisseBPIntl-Antique.woff') format('woff'), url('../fonts/SuisseBPIntl-Antique.ttf')  format('truetype'), url('../fonts/SuisseBPIntl-Antique.svg#SuisseBPIntl-Antique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Knockout sumo
+@font-face {
+    font-family: 'Knockout-HTF74-FullSumo';
+    src: url('../fonts/Knockout-HTF74-FullSumo.eot?#iefix') format('embedded-opentype'),  url('../fonts/Knockout-HTF74-FullSumo.otf')  format('opentype'),
+    url('../fonts/Knockout-HTF74-FullSumo.woff') format('woff'), url('../fonts/Knockout-HTF74-FullSumo.ttf')  format('truetype'), url('../fonts/Knockout-HTF74-FullSumo.svg#Knockout-HTF74-FullSumo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Knockout middle
+@font-face {
+    font-family: 'Knockout-HTF71-FullMiddlewt';
+    src: url('../fonts/Knockout-HTF71-FullMiddlewt.eot?#iefix') format('embedded-opentype'),  url('../fonts/Knockout-HTF71-FullMiddlewt.otf')  format('opentype'),
+    url('../fonts/Knockout-HTF71-FullMiddlewt.woff') format('woff'), url('../fonts/Knockout-HTF71-FullMiddlewt.ttf')  format('truetype'), url('../fonts/Knockout-HTF71-FullMiddlewt.svg#Knockout-HTF71-FullMiddlewt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+//########################################
+//## FONT VARIABLES ######################
+//########################################
+
+$font-main: 'SuisseBPIntl-Regular';
+$font-secondary: "Knockout-HTF74-FullSumo";
+
+$suisse-antique: 'SuisseBPIntl-Antique';
+$suisse-regular: 'SuisseBPIntl-Regular';
+
+$knockout-sumo: 'Knockout-HTF74-FullSumo';
+$knockout-middle: 'Knockout-HTF71-FullMiddlewt';
+
+
+//########################################
+//## SIZES ###############################
+//########################################
+
+$browser-context: 17; // px
+$browser-line-height: 28; // px

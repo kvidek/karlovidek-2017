@@ -1,0 +1,20 @@
+$susy: (
+        columns: 24,
+        gutters: 0,
+        math: fluid,
+        output: float,
+        gutter-position: inside,
+        global-box-sizing: border-box,
+        use-custom: (rem: true),
+    /*debug: (
+            image: show,
+            output: overlay,
+            toggle: top right,
+            color: rgba(red, .25),
+    ),*/
+);
+
+body {
+    //if using susy debug, include container and uncomment debug above
+    //@include container();
+}

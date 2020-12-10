@@ -1,0 +1,69 @@
+@mixin transition($css: all, $seconds: 0.2s, $delay: 0s, $type: 5) {
+    transition: $css $seconds get-transition-type($type) $delay;
+    -o-transition: $css $seconds get-transition-type($type) $delay;
+    -moz-transition: $css $seconds get-transition-type($type) $delay;
+    -webkit-transition: $css $seconds get-transition-type($type) $delay;
+}
+
+@mixin transition-custom($animation-custom...) {
+    transition: $animation-custom;
+    -o-transition: $animation-custom;
+    -moz-transition: $animation-custom;
+    -webkit-transition: $animation-custom;
+}
+
+@mixin transition-extended($animation: all, $duration: 0.2s, $delay: 0s, $type: 1, $iteration-count: infinite) {
+    -webkit-animation-iteration-count: $iteration-count;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-delay: $delay;
+    -webkit-animation-name: $animation;
+    -webkit-animation-timing-function: get-transition-type($type);
+    -moz-animation-iteration-count: $iteration-count;
+    -moz-animation-duration: $duration;
+    -moz-animation-delay: $delay;
+    -moz-animation-name: $animation;
+    -moz-animation-timing-function: get-transition-type($type);
+    -o-animation-iteration-count: $iteration-count;
+    -o-animation-duration: $duration;
+    -o-animation-delay: $delay;
+    -o-animation-name: $animation;
+    -o-animation-timing-function: get-transition-type($type);
+    animation-iteration-count: $iteration-count;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-name: $animation;
+    animation-timing-function: get-transition-type($type);
+}
+
+@mixin transition-control($bool: true) {
+    @if $bool == true {
+        -webkit-animation-play-state: running;
+        -moz-animation-play-state: running;
+        -o-animation-play-state: running;
+        animation-play-state: running;
+    }
+    @else {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+    }
+}
+
+@mixin keyframes($animationname) {
+    @-webkit-keyframes #{$animationname} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationname} {
+        @content;
+    }
+
+    @-o-keyframes #{$animationname} {
+        @content;
+    }
+
+    @keyframes #{$animationname} {
+        @content;
+    }
+}

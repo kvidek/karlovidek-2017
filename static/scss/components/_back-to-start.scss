@@ -1,0 +1,119 @@
+//CALLBACK
+.is-firefox {
+    .back-to-start {
+        span {
+            &:after {
+                display: none;
+            }
+        }
+    }
+;
+}
+//BACK TO START
+.back-to-start {
+    position: relative;
+    @include pad(60px);
+    transition: $slide;
+
+    @include MQ(desktop-) {
+        @include pad(0);
+        padding-bottom: 30px;
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        overflow: hidden;
+
+        @include MQ(desktop-) {
+            //display: none;
+
+            position: relative;
+            height: auto;
+            display: block;
+            padding-top: 60px;
+            overflow: visible;
+        }
+
+        @include MQ(desktop) {
+            &:hover {
+                .back-to-start {
+                    transform: translateX(-12px);
+
+                    span {
+                        &:after {
+                            clip-path: $clip-width-100;
+                        }
+                    }
+                }
+
+                .back-to-start__line {
+                    transform: translateX(-40px);
+                }
+            }
+        }
+    }
+
+    &__line {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform: translateX(-5px);
+        display: block;
+        height: 100%;
+        background-color: $spring-green;
+        width: 100%;
+        transition: $slide;
+
+        @include MQ(desktop-) {
+            bottom: 0;
+            width: 100vw;
+            height: 5px;
+            transform: translateX(-50%);
+            left: 50%;
+            top: auto;
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 7.05vw;
+        line-height: 0.8em;
+        font-family: $knockout-sumo;
+        position: relative;
+
+        @include MQ(desktop-) {
+            display: inline;
+        }
+
+        &:after {
+            content: attr(title);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: block;
+            font-size: 7.05vw;
+            line-height: 0.8em;
+            font-family: $knockout-sumo;
+            color: $spring-green;
+            transition: $slide;
+            clip-path: $clip-width-0-rtl;
+            will-change: clip-path;
+        }
+    }
+}
+
+.section {
+    &.section--contact {
+        .container {
+            padding-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+// EASE IN
+$ease-in-quad       :  cubic-bezier(0.550,  0.085, 0.680, 0.530);
+$ease-in-cubic      :  cubic-bezier(0.550,  0.055, 0.675, 0.190);
+$ease-in-quart      :  cubic-bezier(0.895,  0.030, 0.685, 0.220);
+$ease-in-quint      :  cubic-bezier(0.755,  0.050, 0.855, 0.060);
+$ease-in-sine       :  cubic-bezier(0.470,  0.000, 0.745, 0.715);
+$ease-in-expo       :  cubic-bezier(0.950,  0.050, 0.795, 0.035);
+$ease-in-circ       :  cubic-bezier(0.600,  0.040, 0.980, 0.335);
+$ease-in-back       :  cubic-bezier(0.600, -0.280, 0.735, 0.045);
+// EASE OUT
+$ease-out-quad      :  cubic-bezier(0.250,  0.460, 0.450, 0.940);
+$ease-out-cubic     :  cubic-bezier(0.215,  0.610, 0.355, 1.000);
+$ease-out-quart     :  cubic-bezier(0.165,  0.840, 0.440, 1.000);
+$ease-out-quint     :  cubic-bezier(0.230,  1.000, 0.320, 1.000);
+$ease-out-sine      :  cubic-bezier(0.390,  0.575, 0.565, 1.000);
+$ease-out-expo      :  cubic-bezier(0.190,  1.000, 0.220, 1.000);
+$ease-out-circ      :  cubic-bezier(0.075,  0.820, 0.165, 1.000);
+$ease-out-back      :  cubic-bezier(0.175,  0.885, 0.320, 1.275);
+// EASE IN OUT
+$ease-in-out-quad   :  cubic-bezier(0.455,  0.030, 0.515, 0.955);
+$ease-in-out-cubic  :  cubic-bezier(0.645,  0.045, 0.355, 1.000);
+$ease-in-out-quart  :  cubic-bezier(0.770,  0.000, 0.175, 1.000);
+$ease-in-out-quint  :  cubic-bezier(0.860,  0.000, 0.070, 1.000);
+$ease-in-out-sine   :  cubic-bezier(0.445,  0.050, 0.550, 0.950);
+$ease-in-out-expo   :  cubic-bezier(1.000,  0.000, 0.000, 1.000);
+$ease-in-out-circ   :  cubic-bezier(0.785,  0.135, 0.150, 0.860);
+$ease-in-out-back   :  cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+//TRANSITION TYPES
+$hover: all 0.2s $ease-out-quad;
+$slide: all 0.4s  $ease-out-quad;
+$slide-delay: all 0.2s 0.2s $ease-out-quad;
+$slide-delay-slider: all 0.4s 0.1s $ease-out-quad;
+$slide-slow: all 0.5s  $ease-out-quad;
+$zoom: all 1s  $ease-out-expo;
+$zoom-slow: all 2.4s  $ease-in-out-expo;
+
+//CLIP PATH
+$clip-width-0: polygon(0 0, 0 0, 0 100%, 0 100%);
+$clip-width-0-rtl: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+$clip-width-25: polygon(0 0, 25% 0, 25% 100%, 0 100%);
+$clip-width-50: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+$clip-width-75: polygon(0 0, 75% 0, 75% 100%, 0 100%);
+$clip-width-100: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+$clip-height-0: polygon(0 0, 100% 0, 100% 0, 0 0);
+$clip-height-100: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+$clip-center-0: inset(50% 50% 50% 50%);
+$clip-center-100: inset(0 0 0 0);
+
+$clip-center-radial-0: circle(0.0% at 50% 50%);
+$clip-center-radial-100: polygon(0 100%, 0 0, 100% 0, 100% 100%);
